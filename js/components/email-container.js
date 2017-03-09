@@ -7,6 +7,7 @@ export default function EmailContainer(props) {
   return (
     <div>
       <InboxEmailList emails = {EMAILS} folder = {props.params.folder}/>
+      {props.children}
     </div>
   )
 }

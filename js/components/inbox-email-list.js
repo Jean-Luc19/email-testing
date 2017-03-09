@@ -6,14 +6,10 @@ export default function InboxEmailList(props) {
    const folder = props.folder
    const emails = Object.keys(props.emails[folder]).map((emailId, index)=>{
       const email = props.emails[folder][emailId];
-
-
-
       return (
         <li key={index}>
-            <Email to={email.to}
+            <Email
                    from={email.from}
-                   title={email.title}
                    content={email.content}
             />
         </li>
@@ -21,7 +17,7 @@ export default function InboxEmailList(props) {
    });
   return (
         <div>
-          <h2>{folder} Inbox</h2>
+          <h2>{folder}</h2>
           <ul>
             {emails}
           </ul>
