@@ -2,14 +2,17 @@ require('babel-polyfill');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory} from 'react-router';
-//import EmailContainer from './components/email-container';
-import InboxEmailList from './components/inbox-email-list';
-import SpamEmailList from './components/spam-email-list';
+import EmailContainer from './components/email-container';
+import MessageContainer from './components/message-container';
+
+
 
 const routes = (
         <Router history ={hashHistory}>
-            <Route path="/inbox" component={InboxEmailList} />
-            <Route path="/spam" component={SpamEmailList} />
+
+            <Route path= ":folder" component={EmailContainer}>
+              <Route path = ":messageid" component = {MessageContainer}/>
+            </Route>
         < /Router>
 );
 
