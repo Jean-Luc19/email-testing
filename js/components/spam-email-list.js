@@ -2,7 +2,7 @@ import React from 'react';
 import Email from './email';
 
 
-export default function InboxEmailList(props) {
+export default function SpamEmailList(props) {
    const emails = Object.keys(props.emails).map((emailId, index)=>{
       const email = props.emails[emailId];
 
@@ -17,12 +17,12 @@ export default function InboxEmailList(props) {
       )
    });
   return (
-        <div>
-          <h2>Main Inbox</h2>
-          <ul>
-            {emails}
-          </ul>
-        </div>
+    <div>
+      <h2>Spam Inbox</h2>
+      <ul>
+        {emails}
+      </ul>
+    </div>
   );
 
 };
