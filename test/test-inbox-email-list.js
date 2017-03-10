@@ -8,7 +8,7 @@ const should = chai.should();
     import InboxEmailList from '../js/components/inbox-email-list';
 
     describe('Component Should Return a list of emails', function() {
-        const folder = 'inbox';
+        const folder = 'spam';
         it('Renders Emails in a List', function() {
             const renderer = TestUtils.createRenderer();
             renderer.render(<InboxEmailList folder="inbox" emails={EMAILS}/>)
