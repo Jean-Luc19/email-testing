@@ -12,12 +12,14 @@ const routes = (
         <Router history ={hashHistory}>
             <Route path="/emails" component={AppChrome}>
                 <IndexRoute component={FolderContainer} />
-                <Route path=":folder" component={EmailContainer}>
-                    <IndexRoute/>
-                    <Route path=":messageid" component={MessageContainer} />
-                < /Route>
-            < /Route>
-        < /Router>
+                <Route path=":folder" >
+                    <IndexRoute component={EmailContainer}/>
+                    <Route path=":messageid" component={MessageContainer} >
+                    <IndexRoute />
+                    </Route>
+                </Route>
+            </Route>
+        </Router>
 );
 
 document.addEventListener('DOMContentLoaded', () =>
