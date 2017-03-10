@@ -18,7 +18,7 @@ export default function InboxEmailList(props) {
       )
    });
   return (
-        <div>
+        <div className="email-list">
           <h2>{folder}</h2>
           <ul>
             {emails}
