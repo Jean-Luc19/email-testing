@@ -11,6 +11,8 @@ export default function InboxEmailList(props) {
             <Email
                    from={email.from}
                    content={email.content}
+                   id={email.id}
+                   folder={props.folder}
             />
         </li>
       )

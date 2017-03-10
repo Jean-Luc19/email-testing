@@ -5,7 +5,6 @@ export default function MessageContainer(props) {
     const folder = props.params.folder;
     const id = props.params.messageid;
     const message = EMAILS[folder][id];
-    console.log(message);
   return (
     <div>
         <p>{message.to}</p>
